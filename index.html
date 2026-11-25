@@ -15,12 +15,15 @@
       <div class="hero__container">
         <h1 class="hero__title">Добро пожаловать на мой сайт мини-игр</h1>
         <p class="hero__text">
-          Тебе предстоит пройти несколько увлекательных игр.<br>
+          Тебе предстоит пройти несколько увлекательных игр.<br class="hero__break">
           Если готов, нажимай <strong class="hero__text-accent">«Поехали!»</strong> и <strong class="hero__text-accent">приступай</strong>.
         </p>
         <a class="hero__button" href="#about">Поехали!</a>
       </div>
-      <img class="hero__decor hero__decor--burst" src="img/hero-burst.svg" alt="" width="413" height="528">
+      <picture>
+        <source media="(max-width: 1024px)" srcset="img/hero-burst-full.svg">
+        <img class="hero__decor hero__decor--burst" src="img/hero-burst.svg" alt="" width="413" height="528">
+      </picture>
       <img class="hero__decor hero__decor--line-1" src="img/hero-line-1.svg" alt="" width="319" height="154">
       <img class="hero__decor hero__decor--line-2" src="img/hero-line-2.svg" alt="" width="144" height="180">
       <img class="hero__decor hero__decor--line-3" src="img/hero-line-3.svg" alt="" width="216" height="420">
@@ -34,62 +37,80 @@
 
     <section class="about" id="about">
       <div class="about__container">
-        <h2 class="about__title">Об играх</h2>
+        <h2 class="about__title"><span class="about__title-text about__title-text--desktop">Об играх</span><span class="about__title-text about__title-text--mobile">Мини-игры</span></h2>
         <p class="about__text">
-          В моей коллекции представлено 6 игр на разные темы.<br>
-          Игры несложные — в них может поиграть каждый.<br>
+          В моей коллекции представлено 6 игр на разные темы.<br class="about__break">
+          Игры несложные — в них может поиграть каждый.<br class="about__break">
           Все игры доступны для пользования.
         </p>
-        <div class="about__cards">
-          <div class="about__column">
+        <ul class="about__list">
+          <li class="about__item">
             <a class="game-card" href="#">
               <img class="game-card__image" src="img/game-1.png" alt="" width="378" height="314">
               <div class="game-card__body">
                 <span class="game-card__tag">Игра № 1</span>
                 <h3 class="game-card__title">Угадай число</h3>
+                <p class="game-card__text">Попробуй угадать случайное число от 1 до 100.</p>
+                <span class="game-card__button">Играть!</span>
               </div>
             </a>
-            <a class="game-card" href="#">
-              <img class="game-card__image" src="img/game-4.png" alt="" width="378" height="314">
-              <div class="game-card__body">
-                <span class="game-card__tag">Игра № 4</span>
-                <h3 class="game-card__title">Камень, ножницы, бумага</h3>
-              </div>
-            </a>
-          </div>
-          <div class="about__column">
+          </li>
+          <li class="about__item">
             <a class="game-card" href="#">
               <img class="game-card__image" src="img/game-2.png" alt="" width="378" height="314">
               <div class="game-card__body">
                 <span class="game-card__tag">Игра № 2</span>
                 <h3 class="game-card__title">Простая арифметика</h3>
+                <p class="game-card__text">Попробуй решить простые арифметические задачи.</p>
+                <span class="game-card__button">Играть!</span>
               </div>
             </a>
-            <a class="game-card" href="#">
-              <img class="game-card__image" src="img/game-5.png" alt="" width="378" height="314">
-              <div class="game-card__body">
-                <span class="game-card__tag">Игра № 5</span>
-                <h3 class="game-card__title">Простая викторина</h3>
-              </div>
-            </a>
-          </div>
-          <div class="about__column">
+          </li>
+          <li class="about__item">
             <a class="game-card" href="#">
               <img class="game-card__image" src="img/game-3.png" alt="" width="378" height="314">
               <div class="game-card__body">
                 <span class="game-card__tag">Игра № 3</span>
                 <h3 class="game-card__title">Переверни текст</h3>
+                <p class="game-card__text">Попробуй ввести текст, который будет перевернут.</p>
+                <span class="game-card__button">Играть!</span>
               </div>
             </a>
+          </li>
+          <li class="about__item about__item--raised">
+            <a class="game-card" href="#">
+              <img class="game-card__image" src="img/game-4.png" alt="" width="378" height="314">
+              <div class="game-card__body">
+                <span class="game-card__tag">Игра № 4</span>
+                <h3 class="game-card__title">Камень, ножницы, бумага</h3>
+                <p class="game-card__text">Сыграй в популярную игру против компьютера.</p>
+                <span class="game-card__button">Играть!</span>
+              </div>
+            </a>
+          </li>
+          <li class="about__item">
+            <a class="game-card" href="#">
+              <img class="game-card__image" src="img/game-5.png" alt="" width="378" height="314">
+              <div class="game-card__body">
+                <span class="game-card__tag">Игра № 5</span>
+                <h3 class="game-card__title">Простая викторина</h3>
+                <p class="game-card__text">Отвечай на вопросы викторины с вариантами ответов.</p>
+                <span class="game-card__button">Играть!</span>
+              </div>
+            </a>
+          </li>
+          <li class="about__item about__item--raised">
             <a class="game-card" href="#">
               <img class="game-card__image" src="img/game-6.png" alt="" width="378" height="314">
               <div class="game-card__body">
                 <span class="game-card__tag">Игра № 6</span>
                 <h3 class="game-card__title">Генератор случайных цветов</h3>
+                <p class="game-card__text">Игра, в которой при клике<br>на кнопку фон страницы<br>меняется на случайный.</p>
+                <span class="game-card__button">Играть!</span>
               </div>
             </a>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
       <img class="about__decor about__decor--big" src="img/about-star-big.svg" alt="" width="568" height="568">
       <img class="about__decor about__decor--small" src="img/about-star-small.svg" alt="" width="32" height="32">
